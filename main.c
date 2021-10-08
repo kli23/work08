@@ -2,64 +2,31 @@
 #include <stdlib.h>
 #include <string.h>
 
-int mystrlen( char *s ) {
-	int sum = 0;
-	while (*(s != 0) {
-		sum++;
-		s++;
-	}
-	return sum;
-}
-
-char * mystrcpy( char *dest, char *source ) {
-	
-
-
-}
-
-char * mystrncpy( char *dest, char *source, int n) {
-	int i;
-	for (i = 0; i < n; i++) {
-		*(dest + i) = *(source + i); 
-	}
-	return dest;
-
-}
-
-char * mystrncat( char *dest, char *source, int n) {
-
-}
-
-int mystrcmp( char *s1, char *s2 ) {
-}
-
-char * mystrchr( char *s, char c ) {
-}
-
+#include "mystring.h"
 
 int main() {
 
   char s1[100];
   char s2[100] = "hello";
   char s3[100] = "goodbye";
-  
+
   printf("start strings:\n");
   printf("s1: [%s]\n", s1);
   printf("s2: [%s]\n", s2);
   printf("s3: [%s]\n", s3);
-  
+
   printf("\nTesting strlen(s2):\n");
   printf("[standard]:\t%lu\n", strlen(s2) );
   printf("[mine]:\t\t%d\n", mystrlen(s2) );
-	/*
+
   printf("\nTesting strcpy(s1, s2):\n");
   printf("[standard]:\t[%s]\n", strcpy(s1, s2) );
   printf("[mine]:\t\t[%s]\n", mystrcpy(s1, s2) );
-*/
+
   printf("\nTesting strncpy(s1, s3, 3):\n");
   printf("[standard]:\t[%s]\n", strncpy(s1, s3, 3) );
   printf("[mine]:\t\t[%s]\n", mystrncpy(s1, s3, 3) );
-  /*
+
   printf("\nTesting strcat(s1, s3):\n");
   printf("[standard]:\t[%s]\n", strcat(s1, s3) );
   s1[5] = 0;
@@ -73,7 +40,7 @@ int main() {
   printf("\nTesting strchr(s1, 'l'):\n");
   printf("[standard]:\t[%p]\n", strchr(s1, 'l') );
   printf("[mine]:\t\t[%p]\n", mystrchr(s1, 'l') );
-  
+
   printf("\nTesting strchr(s1, 0):\n");
   printf("[standard]:\t[%p]\n", strchr(s1, 0) );
   printf("[mine]:\t\t[%p]\n", mystrchr(s1, 0) );
@@ -92,6 +59,6 @@ int main() {
   printf("\tComparting abc to abc:\n");
   printf("\t\t[standard]:\t[%d]\n", strcmp("abc", "abc") );
   printf("\t\t[mine]:\t\t[%d]\n", mystrcmp("abc", "abc") );
-*/
-  return 0; 
+
+  return 0;
 }
